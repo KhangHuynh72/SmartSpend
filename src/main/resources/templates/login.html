@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SmartSpend - Login</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="login-card">
+        <h2 style="text-align: center; color: #2c3e50;">SmartSpend AI</h2>
+        <p style="text-align: center; color: #7f8c8d;">Personal Finance Tracker</p>
+
+        <form th:action="@{/login}" method="post">
+            <div style="margin-bottom: 15px;">
+                <label>Email</label><br>
+                <input type="text" name="username" style="width: 100%; padding: 8px; margin-top: 5px;" required>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label>Password</label><br>
+                <input type="password" name="password" style="width: 100%; padding: 8px; margin-top: 5px;" required>
+            </div>
+            <button type="submit" style="width: 100%; background: #2c3e50; color: white; padding: 10px; border: none; border-radius: 5px;">
+                Log In
+            </button>
+        </form>
+
+        <div th:if="${param.error}" style="color: red; margin-top: 15px; text-align: center;">
+            Invalid email or password.
+        </div>
+    </div>
+</body>
+</html>

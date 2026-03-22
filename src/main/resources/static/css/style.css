@@ -1,0 +1,53 @@
+/* General Reset */
+body {
+	background-color: #f4f7f6;
+	font-family: 'Segoe UI', sans-serif;
+	margin: 0;
+}
+
+.home-container {
+	background: linear-gradient(135deg, #ffffff 0%, #eef2f3 100%);
+	min-height: 100vh;
+}
+
+h1 {
+	margin-bottom: 0.5rem;
+}
+
+h3 {
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+
+/* Login Page Container */
+.login-card {
+	max-width: 400px;
+	margin: 100px auto;
+	background: white;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Sidebar/Header Style */
+.navbar-custom {
+	background-color: #2c3e50;
+	color: white;
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content-area {
+	padding: 2rem;
+}
+
+.btn-logout {
+	background-color: #e74c3c;
+	color: white;
+	border: none;
+	padding: 5px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+}

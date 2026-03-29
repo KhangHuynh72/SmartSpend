@@ -20,7 +20,7 @@ public class SecurityConfig {
         http
             .authorizeHttpRequests(auth -> auth
                 // Public pages anyone can see
-                .requestMatchers("/", "/login", "/css/**", "/js/**", "/images/**").permitAll()
+                .requestMatchers("/", "/login", "/register", "/css/**", "/js/**", "/images/**").permitAll()
                 // H2 Console (for your testing)
                 .requestMatchers("/h2-console/**").permitAll()
                 // All other pages require a login

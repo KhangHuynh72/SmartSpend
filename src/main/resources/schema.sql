@@ -20,3 +20,24 @@ CREATE TABLE user_role (
     FOREIGN KEY (userId) REFERENCES sec_user(userId),
     FOREIGN KEY (roleId) REFERENCES sec_role(roleId)
 );
+
+-- 4. Table for Transactions
+CREATE TABLE transaction (
+    id              BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    userId          BIGINT NOT NULL,
+    amount          DECIMAL(10, 2) NOT NULL,
+    transactionDate DATE NOT NULL,
+    category        VARCHAR(100),
+    description     VARCHAR(255),
+    FOREIGN KEY (userId) REFERENCES sec_user(userId)
+);
+
+-- 5. Table for Budgets
+CREATE TABLE budget (
+    id          BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    userId      BIGINT NOT NULL,
+    category    VARCHAR(100) NOT NULL,
+    limitAmount DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (userId) REFERENCES sec_user(userId),
+    UNIQUE (userId, category)
+);
